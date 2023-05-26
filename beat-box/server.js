@@ -4,6 +4,10 @@ const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
+require('dotenv').config()
+// connect to the database with AFTER the config vars are processed
+require('./config/database')
+
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
 

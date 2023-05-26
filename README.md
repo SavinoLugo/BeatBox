@@ -25,7 +25,7 @@ In the future this will be deployed online on Heroku [here](link).
 A [Trello](https://trello.com/b/LkZT1O4J/music-catalog) board was used to keep track of all progress for this project.
 
 Example below:
-![Trello](assets/images/Trello.png)
+![Trello](beat-box/public/images/Trello.png)
 
 ---
 

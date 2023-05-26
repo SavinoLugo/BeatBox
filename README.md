@@ -26,3 +26,9 @@ A [Trello](https://trello.com/b/LkZT1O4J/music-catalog) board was used to keep t
 
 Example below:
 ![Trello](assets/images/Trello.png)
+
+---
+
+## **_Resources_**
+
+As of right now there are none, but they will be added in the near future.(Like next ten daysish)

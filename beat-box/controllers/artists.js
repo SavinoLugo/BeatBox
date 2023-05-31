@@ -2,14 +2,29 @@ const Artist = require('../models/artist')
 
 module.exports = {
   index,
-  new: newArtist
+  new: newArtist,
+  create,
+  index
 }
-function index(req, res) {
+
+//
+async function index(req, res) {
   res.render('artists/index', {
-    artists: Artist.find()
+    artists: await Artist.find()
   })
 }
 
 function newArtist(req, res) {
   res.render('artists/new', { title: 'Add Artist', errorMsg: '' })
+}
+
+//For Submit Button CREATE
+async function create(req, res) {
+  try {
+    await Artist.create(req.body)
+    res.redirect('/artists')
+  } catch (err) {
+    console.log(err)
+    res.render('artists', { errorMsg: err.message })
+  }
 }

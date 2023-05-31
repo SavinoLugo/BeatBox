@@ -6,4 +6,10 @@ const artistsCtrl = require('../controllers/artists')
 router.get('/', artistsCtrl.index)
 router.get('/new', artistsCtrl.new)
 
+//POST
+router.post('/', artistsCtrl.create)
+
+//Get rout for /artists IDX
+router.get('/', artistsCtrl.index)
+
 module.exports = router

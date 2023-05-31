@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Resource</title>
+  <!-- Add your CSS and other dependencies here -->
+</head>
+<body>
+  <%- include('./partials/header') %>
+
+  <h2>Edit Resource</h2>
+
+  <form action="/resources/<%= resource._id %>?_method=PUT" method="POST">
+    <!-- Pre-fill form elements with existing data -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= resource.name %>" required>
+
+    <!-- Add more form elements for other data fields -->
+
+    <button type="submit">Update Resource</button>
+  </form>
+
+  <%- include('./partials/footer') %>
+</body>
+</html>

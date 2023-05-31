@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', (req, res, next) => {
-  res.send('This is the artists page.')
-})
+// Creating a controller module
+const artistsCtrl = require('../controllers/artists')
+router.get('/', artistsCtrl.index)
+router.get('/new', artistsCtrl.new)
 
 module.exports = router

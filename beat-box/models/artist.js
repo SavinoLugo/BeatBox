@@ -11,6 +11,7 @@ const artistSchema = new mongoose.Schema({
   },
   yearFormed: {
     type: Number,
+    min: 1900,
     required: true
   }
 })

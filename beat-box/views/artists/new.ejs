@@ -6,8 +6,22 @@
 <form id="artists-form" action="/artists" method="POST">
   <label>Artist
     <input type="text" name="name">
-    
   </label>
+  <br>
+  <label>Genre
+    <select name="genre">
+      <option value="Rock">Rock</option>
+      <option value="Metal">Metal</option>
+      <option value="Pop">Pop</option>
+      <option value="Indie">Indie</option>
+      <option value="Thrash">Thrash</option>
+    </select>
+  </label>
+  <br>
+  <label>Year Formed
+    <input type="number" name="yearFormed">
+  </label>
+  <input type="submit" name="Add Artist">
 </form>
 
 <%- include('../partials/footer') %>

@@ -11,12 +11,16 @@
   </thead>
   <tbody>
     <% artists.forEach(function(a) { %>
-    <tr>
-      <td><%= a.name %></td>
-      <td><%= a.genre %></td>
-      <td><%= a.yearFormed %></td>
-    </tr>
-    <% }) %>
+      <form action="/artists/<%= a.id %>?_method=DELETE" class="delete-form" method="POST">
+        <br>
+        <button type="submit">X</button>
+      </form>
+      <tr>
+        <td><%= a.name %></td>
+        <td><%= a.genre %></td>
+        <td><%= a.yearFormed %></td>
+      </tr>
+      <% }) %>
   </tbody>
 </table>
 

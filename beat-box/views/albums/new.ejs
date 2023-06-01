@@ -1,13 +1,15 @@
 <%- include('../partials/header') %>
-<h1>Views Artists New Page</h1>
+<h1>Views Albums New Page</h1>
 
 <br>
 
-
-
-<form id="artists-form" action="/artists" method="POST">
-  <label>Artist
-    <input type="text" name="name">
+<form id="albums-form" action="/albums" method="POST">
+  <label>Album Title
+    <input type="text" name="title">
+  </label>
+  <br>
+  <label>Release Year
+    <input type="number" name="releaseYear">
   </label>
   <br>
   <label>Genre
@@ -20,10 +22,10 @@
     </select>
   </label>
   <br>
-  <label>Year Formed
-    <input type="number" name="yearFormed">
+  <label>Artist
+    <input type="text" name="artist">
   </label>
-  <input type="submit" name="Add Artist">
+  <input type="submit" name="Add Album">
 </form>
 
 <%- include('../partials/footer') %>

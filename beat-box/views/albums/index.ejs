@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<h2>All Albums</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>  
+      <th>Release Year</th>    
+      <th>Genre</th>
+      <th>Artist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% albums.forEach(function(d) { %>
+    <tr>
+      <td><%= d.title %></td>
+      <td><%= d.releaseYear %></td>
+      <td><%= d.genre %></td>
+      <td><%= d.artist %></td>
+    </tr>
+    <form action="/albums/<%= d.id %>?_method=DELETE" class="delete-form" method="POST">
+      <button type="submit">X</button>
+    </form>
+    <% }) %>
+  </tbody>
+</table>
+<%- include('../partials/footer') %>

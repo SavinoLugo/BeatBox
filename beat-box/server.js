@@ -8,14 +8,12 @@ const passport = require('passport')
 const methodOverride = require('method-override')
 
 require('dotenv').config()
-// connect to the database with AFTER the config vars are processed
 require('./config/database')
 require('./config/passport')
 
 const indexRouter = require('./routes/index')
 const albumsRouter = require('./routes/albums')
 const artistsRouter = require('./routes/artists')
-const usersRouter = require('./routes/users')
 
 const app = express()
 

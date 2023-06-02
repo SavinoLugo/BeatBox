@@ -4,16 +4,16 @@
 <br>
 
 <form id="albums-form" action="/albums" method="POST">
-  <label>Album Title
-    <input type="text" name="title">
+  <label  style="width: 600px;">Album Title
+    <input style="margin-left: 5px; width: 378px;" type="text" name="title">
   </label>
   <br>
-  <label>Release Year
-    <input type="number" name="releaseYear">
+  <label style="width: 600px;">Release Year
+    <input style="width: 378px;" type="number" name="releaseYear">
   </label>
   <br>
-  <label>Genre
-    <select name="genre">
+  <label style="width: 500px;">Genre
+    <select style="margin-left: 44px;" name="genre">
       <option value="Rock">Rock</option>
       <option value="Metal">Metal</option>
       <option value="Pop">Pop</option>
@@ -22,10 +22,10 @@
     </select>
   </label>
   <br>
-  <label>Artist
-    <input type="text" name="artist">
+  <label style="width: 600px">Artist
+    <input style="margin-left: 47px; width: 378px;" type="text" name="artist">
   </label>
-  <input value="Add Album" type="submit" name="Add Album">
+  <input class="addAlbum" value="Add Album" type="submit" name="Add Album">
 </form>
 
 <%- include('../partials/footer') %>

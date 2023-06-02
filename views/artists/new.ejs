@@ -1,17 +1,17 @@
 <%- include('../partials/header') %>
-<h1>Add A New Artist</h1>
+<h1 class="newArtist">Add A New Artist</h1>
 
 <br>
 
 
 
 <form id="artists-form" action="/artists" method="POST">
-  <label>Artist
-    <input type="text" name="name">
+  <label style="width: 600px;">Artist
+    <input type="text" name="name" style="margin-left: 47px; width: 378px;">
   </label>
   <br>
-  <label>Genre
-    <select name="genre">
+  <label style="width: 600px;">Genre
+    <select name="genre" style="margin-left: 44px;">
       <option value="Rock">Rock</option>
       <option value="Metal">Metal</option>
       <option value="Pop">Pop</option>
@@ -20,10 +20,10 @@
     </select>
   </label>
   <br>
-  <label>Year Formed
-    <input type="number" name="yearFormed">
+  <label style="width: 500px;">Year Formed
+    <input type="number" name="yearFormed" style="width: 378px; padding-left: 10px; margin-left: 0px ;">
   </label>
-  <input value="Add Artist" type="submit" name="Add Artist">
+  <input class="addArtist" value="Add Artist" type="submit" name="Add Artist">
 </form>
 
 <%- include('../partials/footer') %>

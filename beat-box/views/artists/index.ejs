@@ -4,21 +4,23 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Artist</th>  
       <th>Genre</th>    
       <th>Year Formed</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="artistBody">
     <% artists.forEach(function(a) { %>
-      <form action="/artists/<%= a.id %>?_method=DELETE" class="delete-form" method="POST">
-        <br>
-        <button type="submit">X</button>
-      </form>
-      <tr>
-        <td><%= a.name %></td>
-        <td><%= a.genre %></td>
-        <td><%= a.yearFormed %></td>
+      <tr class="artistInfo">
+        <td>
+          <form action="/artists/<%= a.id %>?_method=DELETE" class="delete-form" method="POST">
+            <button type="submit">X</button>
+          </form>
+        </td>
+          <td><%= a.name %></td>
+          <td><%= a.genre %></td>
+          <td><%= a.yearFormed %></td>
       </tr>
       <% }) %>
   </tbody>

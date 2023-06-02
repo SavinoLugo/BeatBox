@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Title</th>  
       <th>Release Year</th>    
       <th>Genre</th>
@@ -12,14 +13,16 @@
   <tbody>
     <% albums.forEach(function(d) { %>
     <tr>
+      <td>
+        <form action="/albums/<%= d.id %>?_method=DELETE" class="delete-form" method="POST">
+          <button type="submit">X</button>
+        </td>
+      </form>
       <td><%= d.title %></td>
       <td><%= d.releaseYear %></td>
       <td><%= d.genre %></td>
       <td><%= d.artist %></td>
     </tr>
-    <form action="/albums/<%= d.id %>?_method=DELETE" class="delete-form" method="POST">
-      <button type="submit">X</button>
-    </form>
     <% }) %>
   </tbody>
 </table>

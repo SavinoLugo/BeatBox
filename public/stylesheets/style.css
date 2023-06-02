@@ -11,9 +11,11 @@ nav {
 
 .addArtist {
   justify-self: center;
+  border-radius: 10px;
 }
 .addAlbum {
   justify-self: center;
+  border-radius: 10px;
 }
 
 #artists-form {
